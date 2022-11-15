@@ -28,7 +28,9 @@ if(NOT EXISTS ${BUILD_DIR} OR NOT ${DEP_NAME}_FOUND OR LIBOTE_DEV)
                        -DFETCH_AUTO=ON 
                        -DVERBOSE_FETCH=${VERBOSE_FETCH}
                        -DENABLE_ALL_OT=ON
-                       -DENABLE_RELIC=ON
+                       -DENABLE_RELIC=OFF
+                       -DENABLE_SODIUM=ON
+                       -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
                        )
     set(BUILD_CMD     ${CMAKE_COMMAND} --build ${BUILD_DIR} --config ${CMAKE_BUILD_TYPE})
 
